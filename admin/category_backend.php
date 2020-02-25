@@ -18,7 +18,7 @@ if($_SERVER['REQUEST_METHOD'] == 'GET' && isset($_GET['id'])) {
 	$sql = "INSERT INTO categories(name,name_mm) values('$name','$name_mm')";
 	$success = mysqli_query($connection,$sql);
 	if($success) {
-		$_SESSION['success'] = 'New Category was added!';
+		$_SESSION['category_success'] = 'New Category was added!';
 		header("location:category.php");
 	}
 }

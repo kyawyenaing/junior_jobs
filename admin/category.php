@@ -4,8 +4,8 @@ include_once('category_backend.php');
 	<div class="container">
 		<?php include_once('layout.php');?>
 		<div class="row mt-4">
-			<div class="col-md-10 alert fade <?php echo isset($_SESSION['success'])?'show alert-success':'alert-warning' ?>">
-				<?php echo isset($_SESSION['success'])?$_SESSION['success']:'';?>
+			<div class="col-md-10 alert fade <?php echo isset($_SESSION['category_success'])?'show alert-success':'alert-warning' ?>">
+				<?php echo isset($_SESSION['category_success'])?$_SESSION['category_success']:'';?>
 				<button class="btn close" data-dismiss="alert">&times;</button>
 			</div>
 			<div class="col-md-2">
@@ -70,6 +70,6 @@ include_once('category_backend.php');
 		</div>
 	</div>
 	<?php 
-	// session_unset();
+	session_unset();
 	?>
 
